@@ -1,10 +1,10 @@
 # Files
 The following files contain different kinds of information:
-- `total_repo_information.csv`: Contains characteristics (e.g., number of stars, date of the earliest TODO-issue, total number of TODO-issues) for all repositories in which todo\[bot] has created at least one issue. Data does not contain duplicates. Data contains repositories that were not cloned, but these can be filtered out with help of the `cloned`-column.
-- `issues_pre.csv`: Issues that would have been created by todo\[bot] for TODO-comments made in commits before the bot was actually introduced to a repository. Issues were identified using a local copy of todo\[bot] and passing commit diffs to it. Data does not contain duplicates.
-- `issues_post.csv`: Issues created by todo\[bot], including those for uncloned repositories. Data does not contain duplicates.
+- `total_repo_information.csv`: Contains characteristics (e.g., number of stars, date of the earliest TODO-issue, total number of TODO-issues) for all repositories in which todo\[bot] has created at least one issue. Data does **not** contain duplicates. Data contains repositories that were not cloned, but these can be filtered out with help of the `cloned`-column.
+- `issues_pre.csv`: Issues that would have been created by todo\[bot] for TODO-comments made in commits before the bot was actually introduced to a repository. Issues were identified using a local copy of todo\[bot] and passing commit diffs to it. Data does **not** contain duplicates.
+- `issues_post.csv`: Issues created by todo\[bot], including those for uncloned repositories. Data **does** contain duplicates, though duplicates were dropped any time the file was used elsewhere in the code.
 
-Intermediate files are located in `/intermediate-files`. These were used to generate the aforementioned files.
+Intermediate files are located in `/intermediate-files`. These were used to generate the aforementioned files. The issues listed in `repo-results.json` only consist of "post-issues" and **does** contain duplicates. These issues listed here were not used elsewhere in the code.
 
 # Logs
 Logs are included in the `/logs` folder for the following tasks:
